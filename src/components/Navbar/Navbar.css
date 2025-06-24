@@ -1,0 +1,24 @@
+.navbar-toolbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.navbar-logo {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 16px;
+}
+
+.navbar-button {
+    font-weight: 500;
+    text-transform: none;
+}
+
+.navbar-button:hover {
+    background-color: transparent;
+}

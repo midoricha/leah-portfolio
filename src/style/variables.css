@@ -1,0 +1,29 @@
+:root {
+
+    --white: #FFFFFF;
+    --white-medium: #F4F6FA;
+    --white-dark: #D4D6DA;
+    --gray-light: #BEBEBE;
+    --gray: #8C8C8C;
+    --gray-medium: #6E6E6E;
+    --gray-dark: #4D4D4D;
+    --black: #222222;
+
+    --brown-dark: #543310;
+    --brown-medium: #74512D;
+    --brown-light: #AF8F6F;
+    --cream: #F8F4E1;
+
+    --white-transparent: #FFFFFF77;
+    --gray-dashboard: #EAEEF5;
+    --gray-disabled: #DBE0EB;
+    --yellow-pale: #F8F8EC;
+    --table-header: #262D48;
+    --table-header-hover: #E9ECEF;
+    --box-shadow: #0000001A;
+
+    --base-font-size: 62.5%;
+
+    --header-height: 150px;
+    --footer-height: 250px;
+}
