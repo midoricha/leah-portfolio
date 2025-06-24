@@ -10,7 +10,6 @@ function Navbar() {
                 <Typography variant="h6" className="navbar-logo">
                     <img src="/logo.png" alt="Logo" width={48}
                          style={{verticalAlign: 'middle', marginRight: 8}}/>
-
                 </Typography>
                 <Box className="navbar-links">
                     {navItems.map((item) => (

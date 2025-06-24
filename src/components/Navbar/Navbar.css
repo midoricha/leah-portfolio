@@ -4,11 +4,6 @@
     max-width: 100%;
 }
 
-.navbar-logo {
-    font-weight: bold;
-    color: #1976d2;
-}
-
 .navbar-links {
     display: flex;
     gap: 16px;
