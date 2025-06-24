@@ -1,6 +1,5 @@
 import './App.css';
 import './style/variables.css';
-import Navbar from "./components/Navbar/Navbar";
 import {createTheme, ThemeProvider} from "@mui/material";
 import Home from "./pages/Home/Home.tsx";
 
@@ -8,7 +7,6 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Navbar/>
             <Home/>
         </ThemeProvider>
     )
@@ -30,21 +28,51 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 h6: {
-                    color: 'var(--cream)',
+                    color: 'var(--eggplant)',
                 },
                 h1: {
-                    fontFamily: "'Italiana', serif",
-                    color: '#f8c8dc', // Soft pink
-                    textShadow: '0 1px 6px rgba(255, 255, 255, 0.4)', // subtle glow
+                    fontFamily: "'Great Vibes', cursive",
+                    color: 'var(--background-beige)', // Soft pink
+                    textShadow: '0 0 8px rgba(255, 255, 255, 0.6)', // subtle glow
                     fontSize: '10rem',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    padding: '40vh 0',
+                },
+                h4: {
+                    fontFamily: "'Italiana', sans-serif",
+                    marginBottom: '48px',
+                    color: 'var(--eggplant)',
+                    fontSize: '3rem',
                 }
             }
         },
         MuiButton: {
             styleOverrides: {
                 root: {
-                    color: 'var(--cream)',
+                    color: 'var(--eggplant)',
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: '1.2rem',
+                    textTransform: 'none',
+                    letterSpacing: 0,
+                    transition: 'all 0.1s',
+                    '&:hover': {
+                        color: 'var(--cream)',
+                        textShadow: '0 0 8px rgba(255, 255, 255, 0.6)',
+                    },
+                }
+            }
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    backdropFilter: 'blur(8px)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    borderRadius: '16px',
+                    padding: '20px',
+                    boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
+                    color: 'white',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
                 }
             }
         }
