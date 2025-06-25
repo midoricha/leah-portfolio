@@ -5,7 +5,7 @@
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
-    background-color: var(--peach);
+    background-color: var(--background-beige);
 }
 
 .logo {

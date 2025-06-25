@@ -27,7 +27,7 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 h6: {
-                    color: 'var(--eggplant)',
+                    color: 'var(--berry)',
                 },
                 h1: {
                     fontFamily: "'Great Vibes', cursive",
@@ -39,8 +39,9 @@ const theme = createTheme({
                 h4: {
                     fontFamily: "'Italiana', sans-serif",
                     marginBottom: '48px',
-                    color: 'var(--eggplant)',
+                    color: 'var(--berry)',
                     fontSize: '3rem',
+                    textShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
                 },
                 body2: {
                     fontFamily: "'DM Sans', sans-serif",
@@ -53,7 +54,7 @@ const theme = createTheme({
                     fontSize: '1.2rem',
                     transition: 'all 0.1s',
                     '&:hover': {
-                        color: 'var(--cream)',
+                        color: 'var(--peach)',
                     },
                 }
             }

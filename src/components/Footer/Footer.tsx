@@ -22,7 +22,7 @@ function Footer() {
                     <InstagramIcon/>
                 </Link>
             </div>
-            <Typography variant="body2">
+            <Typography variant="body2" sx={{marginTop: '20px'}}>
                 © 2025 Leah Wan. All rights reserved.
             </Typography>
         </div>

@@ -24,17 +24,21 @@ function Home() {
 
     return (
         <div className="home">
-            <video
-                className="video-bg"
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{opacity}}
-            >
-                <source src={`${import.meta.env.BASE_URL}background.mp4`} type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
+            <div className="video-wrapper">
+                <video
+                    className="video-bg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{opacity}}
+                >
+                    <source src={`${import.meta.env.BASE_URL}background.mp4`} type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div className="video-fade-bottom"/>
+            </div>
+            <img src={`${import.meta.env.BASE_URL}sparkles.gif`} alt="" className="sparkles"/>
             <Navbar/>
             <div className="title-section">
                 <Typography variant="h1">
