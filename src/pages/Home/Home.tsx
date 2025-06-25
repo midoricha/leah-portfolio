@@ -3,6 +3,7 @@ import {Typography} from "@mui/material";
 import ProjectGallery from "../../components/ProjectsGallery/ProjectsGallery.tsx";
 import Navbar from "../../components/Navbar/Navbar.tsx";
 import {useEffect, useState} from 'react';
+import Footer from "../../components/Footer/Footer.tsx";
 
 function useScrollProgress() {
     const [scrollY, setScrollY] = useState(0);
@@ -39,11 +40,13 @@ function Home() {
                 <Typography variant="h1">
                     Hi, I'm Leah
                 </Typography>
-                <Typography variant="body2">
-                    A web developer and graphic designer.
+                <Typography variant="body2" sx={{lineHeight: 2}}>
+                    I'm a programmer/graphic designer based in📍Ottawa, Canada. <br/>
+                    I 🩵coffee and bubble tea.
                 </Typography>
             </div>
             <ProjectGallery/>
+            <Footer/>
         </div>
     )
 }
