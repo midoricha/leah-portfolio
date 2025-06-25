@@ -4,6 +4,8 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    min-height: 200vh; /* enough to scroll */
+    z-index: 0;
 }
 
 .video-bg {
@@ -18,4 +20,7 @@
 
 .title-section {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

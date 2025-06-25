@@ -14,14 +14,13 @@ function App() {
 
 const theme = createTheme({
     components: {
-        // Name of the component
         MuiAppBar: {
             styleOverrides: {
-                // Name of the slot
                 root: {
-                    // Some CSS
                     backgroundColor: 'transparent',
                     boxShadow: 'none',
+                    position: 'fixed',
+                    zIndex: '100'
                 },
             },
         },
@@ -36,13 +35,26 @@ const theme = createTheme({
                     textShadow: '0 0 8px rgba(255, 255, 255, 0.6)', // subtle glow
                     fontSize: '10rem',
                     textAlign: 'center',
-                    padding: '40vh 0',
                 },
                 h4: {
                     fontFamily: "'Italiana', sans-serif",
                     marginBottom: '48px',
                     color: 'var(--eggplant)',
                     fontSize: '3rem',
+                },
+                body2: {
+                    fontFamily: "'DM Sans', sans-serif",
+                    color: 'var(--eggplant)',
+                    fontSize: '1.2rem',
+                },
+                body1: {
+                    fontFamily: "'DM Sans', sans-serif",
+                    color: 'var(--eggplant)',
+                    fontSize: '1.2rem',
+                    transition: 'all 0.1s',
+                    '&:hover': {
+                        color: 'var(--cream)',
+                    },
                 }
             }
         },
@@ -72,7 +84,22 @@ const theme = createTheme({
                     boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
                     color: 'white',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    height: '500px'
+                }
+            }
+        },
+        MuiCardContent: {
+            styleOverrides: {
+                root: {
+                    textAlign: 'left'
+                }
+            }
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    margin: '10px',
                 }
             }
         }
