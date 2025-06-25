@@ -32,7 +32,7 @@ function Home() {
                 playsInline
                 style={{opacity}}
             >
-                <source src="/1795913-hd_1920_1080_30fps.mp4" type="video/mp4"/>
+                <source src={`${import.meta.env.BASE_URL}background.mp4`} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
             <Navbar/>

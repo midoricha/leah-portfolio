@@ -46,7 +46,8 @@ function ProjectGallery() {
                                 <Divider/>
                                 <Typography variant="body2">{project.description}</Typography>
                                 {project.image && (
-                                    <img src={project.image} alt="Project image" className="project-image"/>
+                                    <img src={`${import.meta.env.BASE_URL}${project.image}`} alt="Project image"
+                                         className="project-image"/>
                                 )}
                             </CardContent>
                         </Card>
