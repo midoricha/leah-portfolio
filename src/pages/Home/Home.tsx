@@ -38,7 +38,6 @@ function Home() {
                 </video>
                 <div className="video-fade-bottom"/>
             </div>
-            <img src={`${import.meta.env.BASE_URL}sparkles.gif`} alt="" className="sparkles"/>
             <Navbar/>
             <div className="title-section">
                 <Typography variant="h1">

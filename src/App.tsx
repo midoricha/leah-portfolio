@@ -33,7 +33,6 @@ const theme = createTheme({
                     fontFamily: "'Great Vibes', cursive",
                     color: 'var(--background-beige)', // Soft pink
                     textShadow: '0 0 8px rgba(255, 255, 255, 0.6)', // subtle glow
-                    fontSize: '10rem',
                     textAlign: 'center',
                 },
                 h4: {
@@ -64,7 +63,7 @@ const theme = createTheme({
                 root: {
                     color: 'var(--eggplant)',
                     fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '1.2rem',
+                    fontSize: '1rem',
                     textTransform: 'none',
                     letterSpacing: 0,
                     transition: 'all 0.1s',
@@ -101,6 +100,27 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     margin: '10px',
+                }
+            }
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                colorInherit: {
+                    color: 'var(--rose)',
+                }
+            }
+        },
+        MuiBackdrop: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'transparent',
+                }
+            }
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'transparent',
                 }
             }
         }

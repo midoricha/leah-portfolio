@@ -32,16 +32,13 @@
     background: linear-gradient(to bottom, transparent 0%, var(--background-beige) 100%);
 }
 
-.sparkles {
-    object-fit: cover;
-    z-index: -1;
-    position: absolute;
-    margin: 400px 1100px;
-}
-
 .title-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.title-section {
+    padding: 0 30px;
 }

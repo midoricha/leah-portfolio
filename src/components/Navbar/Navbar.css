@@ -25,3 +25,7 @@
 .navbar-button:hover {
     background-color: transparent;
 }
+
+.MuiDrawer-paper {
+    backdrop-filter: blur(8px);
+}
