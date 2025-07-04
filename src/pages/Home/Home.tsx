@@ -4,6 +4,7 @@ import ProjectGallery from "../../components/ProjectsGallery/ProjectsGallery.tsx
 import Navbar from "../../components/Navbar/Navbar.tsx";
 import {useEffect, useState} from 'react';
 import Footer from "../../components/Footer/Footer.tsx";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function useScrollProgress() {
     const [scrollY, setScrollY] = useState(0);
@@ -40,13 +41,22 @@ function Home() {
             </div>
             <Navbar/>
             <div className="title-section">
-                <Typography variant="h1">
+                <div className="floating-elements">
+                    <div className="sparkle sparkle-1"/>
+                    <div className="sparkle sparkle-2"/>
+                </div>
+                <Typography variant="h1" className="fade-in-text">
                     Hi, I'm Leah
                 </Typography>
-                <Typography variant="body2" sx={{lineHeight: 2}}>
-                    I'm a programmer/graphic designer based in📍Ottawa, Canada. <br/>
-                    I 🩵coffee and bubble tea.
-                </Typography>
+                <div className="typewriter-wrapper">
+                    <Typography variant="body2" className="typewriter"
+                                sx={{fontFamily: 'monospace'}}>
+                        Full-stack developer and designer blending logic with aesthetics.
+                    </Typography>
+                </div>
+                <div className="scroll-indicator">
+                    <KeyboardArrowDownIcon fontSize="large"/>
+                </div>
             </div>
             <ProjectGallery/>
             <Footer/>
