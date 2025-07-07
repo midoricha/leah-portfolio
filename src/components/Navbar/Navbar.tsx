@@ -15,8 +15,14 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useState} from "react";
+import {Link} from 'react-router-dom';
 
-const navItems = ['Home', 'About Me', 'Projects', 'Résumé', 'Contact'];
+const navItems = [
+    {label: 'Home', path: '/home'},
+    {label: 'About Me', path: '/about'},
+    {label: 'Résumé', path: '/resume'},
+    {label: 'Contact', path: '/contact'},
+];
 
 function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,10 +36,15 @@ function Navbar() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item}>
-                        <ListItemButton>
-                            <ListItemText primary={item}/>
+                {navItems.map(({label, path}) => (
+                    <ListItem
+                        key={label}
+                    >
+                        <ListItemButton
+                            component={Link}
+                            to={path}
+                        >
+                            <ListItemText primary={label}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -67,8 +78,13 @@ function Navbar() {
                 ) : (
                     <Box className="navbar-links">
                         {navItems.map((item) => (
-                            <Button key={item} className="navbar-button">
-                                {item}
+                            <Button
+                                key={item.label}
+                                className="navbar-button"
+                                component={Link}
+                                to={item.path}
+                            >
+                                {item.label}
                             </Button>
                         ))}
                     </Box>

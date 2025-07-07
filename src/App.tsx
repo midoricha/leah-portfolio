@@ -2,13 +2,27 @@ import './App.css';
 import './style/variables.css';
 import {createTheme, ThemeProvider} from "@mui/material";
 import Home from "./pages/Home/Home.tsx";
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
+import About from "./pages/About/About.tsx";
+import Navbar from './components/Navbar/Navbar.tsx';
+import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
 
     return (
-        <ThemeProvider theme={theme}>
-            <Home/>
-        </ThemeProvider>
+        <Router basename="/leah-portfolio">
+            <ThemeProvider theme={theme}>
+                <Navbar/>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home"/>}/>
+                    <Route path="/home" element={<Home/>}/>
+                    <Route path="/about" element={<About/>}/>
+                    {/*<Route path="/resume" element={<Resume/>}/>*/}
+                    {/*<Route path="/contact" element={<Contact/>}/>*/}
+                </Routes>
+                <Footer/>
+            </ThemeProvider>
+        </Router>
     )
 }
 

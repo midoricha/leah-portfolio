@@ -1,9 +1,7 @@
 import './Home.css';
 import {Typography} from "@mui/material";
 import ProjectGallery from "../../components/ProjectsGallery/ProjectsGallery.tsx";
-import Navbar from "../../components/Navbar/Navbar.tsx";
 import {useEffect, useState} from 'react';
-import Footer from "../../components/Footer/Footer.tsx";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function useScrollProgress() {
@@ -39,7 +37,6 @@ function Home() {
                 </video>
                 <div className="video-fade-bottom"/>
             </div>
-            <Navbar/>
             <div className="hero-section">
                 <div className="title-section">
                     <div className="floating-elements">
@@ -85,7 +82,6 @@ function Home() {
                 </div>
             </div>
             <ProjectGallery/>
-            <Footer/>
         </div>
     )
 }
