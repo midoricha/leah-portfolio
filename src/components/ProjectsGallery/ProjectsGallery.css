@@ -17,5 +17,11 @@
 .project-image {
     width: 100%;
     border-radius: 24px;
-    margin-top: 15px;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }

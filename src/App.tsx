@@ -92,7 +92,8 @@ const theme = createTheme({
         MuiCardContent: {
             styleOverrides: {
                 root: {
-                    textAlign: 'left'
+                    textAlign: 'left',
+                    height: '85%'
                 }
             }
         },

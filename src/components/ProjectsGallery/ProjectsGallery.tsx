@@ -17,6 +17,7 @@ const projects = [
     },
     {
         title: 'Arkanoid Block Breaker Game',
+        image: '/arkanoid_demo.gif',
         description:
             'Replicated the classic arcade game Arkanoid using Unreal Engine 5 and C++.',
     },
@@ -44,11 +45,13 @@ function ProjectGallery() {
                                     )}
                                 </div>
                                 <Divider/>
-                                <Typography variant="body2">{project.description}</Typography>
-                                {project.image && (
-                                    <img src={`${import.meta.env.BASE_URL}${project.image}`} alt="Project image"
-                                         className="project-image"/>
-                                )}
+                                <div className="card-description">
+                                    <Typography variant="body2">{project.description}</Typography>
+                                    {project.image && (
+                                        <img src={`${import.meta.env.BASE_URL}${project.image}`} alt="Project image"
+                                             className="project-image"/>
+                                    )}
+                                </div>
                             </CardContent>
                         </Card>
                     </Grid>

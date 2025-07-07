@@ -31,12 +31,17 @@
     background: linear-gradient(to bottom, transparent 0%, var(--background-beige) 100%);
 }
 
-.title-section {
+.hero-section {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .title-section {
@@ -64,7 +69,7 @@
 .typewriter {
     overflow: hidden;
     white-space: nowrap;
-    border-right: .15em solid var(--cream);
+    border-right: .15em solid var(--background-beige);
     width: fit-content;
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: typing 3s steps(40, end),
@@ -88,11 +93,8 @@
 
 /* Scroll indicator */
 .scroll-indicator {
-    margin-top: 20px;
     animation: bounce 2s infinite;
-    color: white;
-    display: flex;
-    justify-content: center;
+    color: var(--background-beige);
 }
 
 @keyframes bounce {
@@ -106,32 +108,26 @@
 
 /* Floating sparkles */
 .floating-elements {
-    position: absolute;
-    top: 30%;
-    left: 50%;
+    margin: auto;
     transform: translateX(-50%);
     z-index: -1;
 }
 
 .sparkle {
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.7;
+    width: 24px;
     position: absolute;
     animation: float 6s ease-in-out infinite;
 }
 
 .sparkle-1 {
-    top: -50px;
-    left: -60px;
+    top: -10px;
+    left: -200px;
     animation-delay: 0s;
 }
 
 .sparkle-2 {
-    top: 30px;
-    left: 80px;
+    top: 130px;
+    left: 200px;
     animation-delay: 2s;
 }
 
