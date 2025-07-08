@@ -2,7 +2,7 @@ import './App.css';
 import './style/variables.css';
 import {createTheme, ThemeProvider} from "@mui/material";
 import Home from "./pages/Home/Home.tsx";
-import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import About from "./pages/About/About.tsx";
 import Navbar from './components/Navbar/Navbar.tsx';
 import Footer from "./components/Footer/Footer.tsx";
@@ -10,7 +10,7 @@ import Footer from "./components/Footer/Footer.tsx";
 function App() {
 
     return (
-        <Router basename="/leah-portfolio">
+        <Router>
             <ThemeProvider theme={theme}>
                 <Navbar/>
                 <Routes>
