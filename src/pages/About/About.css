@@ -1,10 +1,22 @@
 .about-container {
-    max-width: 960px;
+    /*max-width: 960px;*/
     margin: 80px auto;
-    padding: 20px;
+    padding: 80px;
     color: #333;
     text-align: center;
     /*background-color: var(--peach);*/
+}
+
+.about-section {
+    display: flex;
+    gap: 20px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .about-title {
@@ -29,6 +41,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    transition: all 0.1s ease-in-out;
 }
 
 .about-skills span {
