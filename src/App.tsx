@@ -67,6 +67,15 @@ const theme = createTheme({
                     fontSize: '1.2rem',
                     transition: 'all 0.1s',
                     '&:hover': {
+                        color: 'var(--butter-yellow)',
+                    },
+                },
+                button: {
+                    fontFamily: "'DM Sans', sans-serif",
+                    color: 'var(--eggplant)',
+                    fontSize: '1.2rem',
+                    transition: 'all 0.1s',
+                    '&:hover': {
                         color: 'var(--peach)',
                     },
                 }
@@ -138,7 +147,7 @@ const theme = createTheme({
                     backgroundColor: 'transparent',
                 }
             }
-        }
+        },
     },
 });
 

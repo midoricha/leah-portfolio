@@ -12,13 +12,13 @@ function Footer() {
     return (
         <div className="footer">
             <div className="socials">
-                <Link variant="body1" href={urlLinkedIn} target="_blank" rel="noopener">
+                <Link variant="button" href={urlLinkedIn} target="_blank" rel="noopener">
                     <LinkedInIcon/>
                 </Link>
-                <Link variant="body1" href={urlGithub} target="_blank" rel="noopener">
+                <Link variant="button" href={urlGithub} target="_blank" rel="noopener">
                     <GitHubIcon/>
                 </Link>
-                <Link variant="body1" href={urlInstagram} target="_blank" rel="noopener">
+                <Link variant="button" href={urlInstagram} target="_blank" rel="noopener">
                     <InstagramIcon/>
                 </Link>
             </div>

@@ -9,23 +9,20 @@ import {
     TimelineDot,
     TimelineOppositeContent
 } from '@mui/lab';
-import {timelineOppositeContentClasses} from "@mui/lab";
 
 import {
     SiReact, SiAngular, SiSpringboot, SiJavascript,
     SiFigma, SiGit, SiAdobephotoshop, SiUnrealengine,
     SiTypescript
 } from 'react-icons/si';
-
-
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 
 function About() {
     const timelineItems = [
-        {time: '1999', label: 'Born 🐣'},
-        {time: '2017', label: 'Went to Australia to start undergraduate study in Digital Media 👩‍🎨'},
-        {time: '2022', label: 'Moved to to Canada & dived into coding  💻'},
-        {time: '2023-2024', label: 'Internship @ Canadian Blood Services 💼'},
+        {time: '1999', label: 'Hello, World 🐣'},
+        {time: '2017', label: 'Moved to Australia to study Digital Media @ University of Queensland 👩‍🎨'},
+        {time: '2022', label: 'Started a new chapter in Canada — Computer Science 💻'},
+        {time: '2023-24', label: 'Internship @ Canadian Blood Services 💼'},
         {time: '2025', label: 'Graduated with a Computer Science diploma 🎓'},
         {time: 'Now', label: 'To be continued...'},
     ]
@@ -43,20 +40,47 @@ function About() {
         {name: 'Adobe Photoshop', icon: <SiAdobephotoshop/>, url: 'https://www.adobe.com/ca/products/photoshop.html'},
     ];
 
-
     return (
         <Box className="about-container">
-            <Typography variant="h4" className="about-title" gutterBottom>
-                About Me
-            </Typography>
+            <img src={`${import.meta.env.BASE_URL}wave.svg`} alt="wave" className="hero-wave"/>
+            <Box className="about-hero">
+                <Typography variant="h1" className="about-title" sx={{color: 'var(--butter-yellow)'}} gutterBottom>
+                    About Me
+                </Typography>
+                <Box className="intro-section">
+                    <Box>
+                        <img src={`${import.meta.env.BASE_URL}remote-worker.svg`} alt="My icon" width="400px"/>
+                    </Box>
+                    <Box className="about-intro-wrapper">
+                        <Typography variant="body2" className="about-intro">
+                            Hi, I'm Leah — a full-stack developer and visual designer who loves crafting delightful
+                            digital
+                            experiences. With a background in digital media and computer science, I merge creative
+                            intuition
+                            with technical precision to build interfaces that are as functional as they are
+                            beautiful.
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" className="about-intro">
+                            From turning design mockups into living, breathing apps to optimizing back-end logic, I
+                            enjoy
+                            working across the stack. I've studied and worked across continents, and every project I
+                            take on
+                            reflects my curiosity and care for design detail.
+                        </Typography>
+                        <br/>
+                        <Typography variant="body2" className="about-intro">
+                            When I’m not building web apps, you’ll find me brewing coffee, being a cat mom, or
+                            baking.
+                        </Typography>
+                    </Box>
+                </Box>
+            </Box>
 
-            {/* Interactive Timeline (placeholder) */}
-            <Box className="about-section">
-                <Timeline className="about-timeline" sx={{
-                    [`& .${timelineOppositeContentClasses.root}`]: {
-                        flex: 0.2,
-                    },
-                }}>
+
+            <Box className="about-section timeline-section">
+                <Typography variant="h4">My Journey</Typography>
+                <Timeline position="alternate" className="about-timeline">
                     {timelineItems.map((item, idx) => (
                         <TimelineItem key={idx}>
                             <TimelineOppositeContent>
@@ -71,51 +95,28 @@ function About() {
                     ))}
                 </Timeline>
 
-                <Box className="about-right">
-                    {/* Intro */}
-                    <Typography variant="body2" className="about-intro">
-                        Hey there! I’m Leah — a full-stack web developer and visual designer. I build polished,
-                        performant apps
-                        with playful interfaces and aesthetics. Based in Ottawa, I blend creativity and logic
-                        with every line of code.
-                    </Typography>
-
-
-                    {/* Skills */}
-                    <Box className="about-section">
-                        <Typography variant="h6" className="about-subtitle">Toolbox</Typography>
-                        <Box className="about-skills">
-                            {skills.map((skill, index) => (
-                                <Tooltip title={skill.name} key={index}>
-                                    <IconButton
-                                        className="skill-icon"
-                                        href={skill.url}
-                                        target="_blank"
-                                        rel="noopener"
-                                        size="large"
-                                    >
-                                        {skill.icon}
-                                    </IconButton>
-                                </Tooltip>
-                            ))}
-                        </Box>
-                    </Box>
-
-                    {/* Hobbies */}
-                    <Box className="about-section">
-                        <Typography variant="h6" className="about-subtitle">Fun Facts</Typography>
-                        <Typography variant="body2" className="about-hobbies">
-                            🎧 Remixing music & collecting cute UI inspiration. <br/>
-                            🐾 Cat mom to a very spoiled feline. <br/>
-                            🎮 Loves old-school games and boba tea. <br/>
-                            💡 Dreaming in pixels and pastels.
-                        </Typography>
+                {/* Skills */}
+                <Box className="about-section">
+                    <Typography variant="h4">Toolbox</Typography>
+                    <Box className="about-skills">
+                        {skills.map((skill, index) => (
+                            <Tooltip title={skill.name} key={index}>
+                                <IconButton color="inherit"
+                                            className="skill-icon"
+                                            href={skill.url}
+                                            target="_blank"
+                                            rel="noopener"
+                                            size="large"
+                                >
+                                    {skill.icon}
+                                </IconButton>
+                            </Tooltip>
+                        ))}
                     </Box>
                 </Box>
             </Box>
         </Box>
-
-    )
+    );
 }
 
 export default About;
