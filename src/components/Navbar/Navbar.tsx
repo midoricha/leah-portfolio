@@ -20,7 +20,7 @@ import {Link} from 'react-router-dom';
 const navItems = [
     {label: 'Home', path: '/home'},
     {label: 'About Me', path: '/about'},
-    {label: 'Résumé', path: '/resume'},
+    {label: 'Résumé', path: '/resume', isExternal: true},
     {label: 'Contact', path: '/contact'},
 ];
 
@@ -33,18 +33,30 @@ function Navbar() {
         setMobileOpen(!mobileOpen);
     };
 
+    const handleResumeClick = () => {
+        window.open(`${import.meta.env.BASE_URL}resume.pdf`, '_blank');
+    };
+
+    const handleNavClick = (item: typeof navItems[0]) => {
+        if (item.isExternal) {
+            handleResumeClick();
+        }
+    };
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
             <List>
-                {navItems.map(({label, path}) => (
+                {navItems.map((item) => (
                     <ListItem
-                        key={label}
+                        key={item.label}
                     >
                         <ListItemButton
-                            component={Link}
-                            to={path}
+                            {...(item.isExternal 
+                                ? { onClick: () => handleNavClick(item) }
+                                : { component: Link, to: item.path }
+                            )}
                         >
-                            <ListItemText primary={label}/>
+                            <ListItemText primary={item.label}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -81,8 +93,10 @@ function Navbar() {
                             <Button
                                 key={item.label}
                                 className="navbar-button"
-                                component={Link}
-                                to={item.path}
+                                {...(item.isExternal 
+                                    ? { onClick: () => handleNavClick(item) }
+                                    : { component: Link, to: item.path }
+                                )}
                             >
                                 {item.label}
                             </Button>
