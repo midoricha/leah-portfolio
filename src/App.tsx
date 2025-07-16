@@ -6,6 +6,7 @@ import {HashRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import About from "./pages/About/About.tsx";
 import Navbar from './components/Navbar/Navbar.tsx';
 import Footer from "./components/Footer/Footer.tsx";
+import Contact from './pages/Contact/Contact.tsx';
 
 function App() {
 
@@ -17,8 +18,7 @@ function App() {
                     <Route path="/" element={<Navigate to="/home"/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
-                    {/*<Route path="/resume" element={<Resume/>}/>*/}
-                    {/*<Route path="/contact" element={<Contact/>}/>*/}
+                    <Route path="/contact" element={<Contact/>}/>
                 </Routes>
                 <Footer/>
             </ThemeProvider>
