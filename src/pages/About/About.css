@@ -102,3 +102,23 @@
     max-width: 1000px;
     align-self: center;
 }
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .about-intro-wrapper {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-intro {
+        text-align: left;
+    }
+
+    .intro-section img {
+        width: 300px;
+    }
+}

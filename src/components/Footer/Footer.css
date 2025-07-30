@@ -8,3 +8,9 @@
     justify-content: center;
     gap: 50px;
 }
+
+@media (max-width: 768px) {
+    .socials {
+        gap: 25px;
+    }
+}
