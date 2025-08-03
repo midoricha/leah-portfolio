@@ -76,6 +76,14 @@
     margin-top: 100px;
 }
 
+.about-timeline .MuiTimelineDot-root {
+    background-color: var(--eggplant);
+}
+
+.about-timeline .MuiTimelineConnector-root {
+    background-color: var(--eggplant);
+}
+
 .about-skills {
     display: flex;
     justify-content: center;
