@@ -44,11 +44,22 @@ function ProjectGallery() {
             <Typography variant="h4" className="gallery-heading">
                 My Projects
             </Typography>
-            <Grid container spacing={4} justifyContent="center">
+            <Grid
+                container
+                spacing={4}
+                justifyContent="center"
+                alignItems="stretch"
+            >
                 {projects.map((project, index) => (
-                    <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                    <Grid size={{ xs: 12, sm: 6, md: 6 }} key={index}>
                         <Card className="glass-card">
-                            <CardContent>
+                            <CardContent
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    height: "100%",
+                                }}
+                            >
                                 <div className="card-title">
                                     <Typography variant="h6" gutterBottom>
                                         {project.title}
@@ -64,9 +75,12 @@ function ProjectGallery() {
                                         </Link>
                                     )}
                                 </div>
-                                <Divider />
+                                <Divider sx={{ my: 1 }} />
                                 <div className="card-description">
-                                    <Typography variant="body2">
+                                    <Typography
+                                        variant="body2"
+                                        sx={{ flexGrow: 1 }}
+                                    >
                                         {project.description}
                                     </Typography>
                                     {project.image && (
